@@ -6,7 +6,7 @@ const Body = Matter.Body;
  
 function preload()
 {
-	
+binImage=loadImage("dustbingreen.png")	;
 }
 
 function setup() {
@@ -18,7 +18,7 @@ function setup() {
 
 	//Create the Bodies Here.
 
-Bin=new Dustbin(525,410,130,140);
+Bin=new Wall(525,410,130,140);
 Ground1=new Ground(200,490,800,10);
 wall1=new Wall(460,420,10,100);
 wall2=new Wall(590,420,10,100);
@@ -31,7 +31,10 @@ console.log(paper2);
 
 
 function draw() {
-  rectMode(CENTER);
+ 
+  //rectMode(CENTER);
+  imageMode(CENTER);
+
   background("pink");
   Ground1.display();
   Bin.display();
@@ -39,7 +42,8 @@ function draw() {
  wall1.display();
  wall2.display();
  wall3.display();
- 
+
+ image(binImage,525,410,130,140);
 
   drawSprites();
  
