@@ -6,16 +6,15 @@ class Dustbin{
         this.height=height;
         World.add(world, this.body);
     
-    this.image=loadImage("dustbingreen.png"); 
+    
     
     }
     
     display(){
     var pos=this.body.position;
-    imageMode(CENTER);
+    rectMode(CENER);
     fill (255);
-    image(this.image,pos.x,pos.y,this.width,this.height);
-    
+   rect(pos.x,pos.y,this.width,this.height);
     }
     
     
